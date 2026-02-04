@@ -19,6 +19,8 @@ body {
     width: 300px;
     /* relative --> position veranderen op basis van waar dit element oorspronkelijk al staat */
     position: relative;
+    /* height: 140px; */
+    padding-bottom: 40px;
 }
 
 /* id container aanpassen */
@@ -41,3 +43,17 @@ body {
     top: 10px;
     right: 10px;
 }
+
+.discount {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    /* absolute --> positioneren ten opzichte van eerste parent element MET een specifieke position waarde */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+/* 
+p {
+    margin-bottom: 50px;
+} */
