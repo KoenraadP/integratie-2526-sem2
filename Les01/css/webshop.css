@@ -1,0 +1,43 @@
+/* opmaak van header aanpassen */
+header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+/* body aanpassen */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* alle elementen met class card aanpassen */
+.card {
+    border: 2px solid #ccc;
+    width: 300px;
+    /* relative --> position veranderen op basis van waar dit element oorspronkelijk al staat */
+    position: relative;
+}
+
+/* id container aanpassen */
+#container {
+    padding: 40px;
+    padding-top: 80px;
+    /* blijft staan als je er naartoe gescrolld bent */
+    /* verplicht wel top ingeven hier */
+    position: sticky;
+    top: 0;
+}
+
+/* span new aanpassen */
+.new {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    /* absolute --> positioneren ten opzichte van eerste parent element MET een specifieke position waarde */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
