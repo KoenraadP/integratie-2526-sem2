@@ -8,6 +8,7 @@ html {
 
 /* opmaak voor volledige header */
 header {
+    position: relative;
     background-image: url("../images/background.jpg");
     /* vh --> viewheight, hoogte van het venster */
     height: 80vh;
@@ -107,6 +108,45 @@ header::after {
 /* algemene css voor tabs */
 #tabs {
     position: relative;
+    /* alle elementen (divs) binnen deze section */
+    /* in drie kolommen naast elkaar zetten */
     display: grid;
     grid-template-columns: auto auto auto;
+    /* inhoud en divs zelf centreren */
+    text-align: center;
+    justify-content: space-around;
+    /* extra ruimte boven icons */
+    padding-top: 15px;
+    background-color: #191919;
+    /* rand onder section */
+    border-bottom: 3px solid #3d3d3d;
+    /* kleur van icons en tekst */
+    color: #999;
+}
+
+/* hover styling */
+#tabs div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* class voor rode rand onder tabs */
+.tab-border {
+    border-bottom: 4px solid red;
+}
+
+/* styling voor tab-icon divs */
+.tab-icon {
+    width: 200px;
+}
+
+/* styling voor tab content items (blokjes onderaan) */
+.tab-content-item {
+    /* onzichtbaar maken */
+    display: none;
+}
+
+/* show class toont wél het actieve item */
+.show {
+    display: block;
 }
