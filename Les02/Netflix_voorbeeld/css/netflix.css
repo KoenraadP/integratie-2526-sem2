@@ -9,6 +9,9 @@ html {
 /* opmaak voor volledige header */
 header {
     background-image: url("../images/background.jpg");
+    /* vh --> viewheight, hoogte van het venster */
+    height: 80vh;
+    width: 100%;
 }
 
 /* pseudo-element toevoegen */
@@ -18,7 +21,92 @@ header::after {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* plaatsen 0 pixels vanaf de bovenkant van het */
+    /* eerstvolgende 'parent' element met een position */
+    /* in dit geval zal dit de body zijn omdat er geen parent met position is  */
     position: absolute;
     top: 0;
+    /* box-shadow toekennen, dit zorgt voor schaduwen rond de randen */
+    box-shadow: inset 120px 100px 250px #000,
+        inset -120px -100px 250px #000;
+}
+
+/* css voor divs binnen de header */
+
+#header-top {
+    /* z-index --> om elementen 'boven' een ander element in de diepte te zetten */
+    /* werkt alleen als er ook een specifieke 'position' ingesteld werd */
+    /* x breedte, y hoogte, z diepte */
+    position: relative;
+    z-index: 1;
+    /* alle items horizontaal centreren */
+    display: flex;
+    justify-content: center;
+}
+
+#header-content {
+    position: relative;
+    z-index: 1;
+    /* tekst centreren */
+    text-align: center;
+    /* meer ruimte tussen header-top en header-content */
+    margin-top: 150px;
+}
+
+/* netflix logo stylen */
+#header-top img {
+    width: 170px;
+}
+
+/* sign in stylen */
+#header-top .button {
+    /* 10 pixels van boven en rechts plaatsen */
+    /* ten opzichte van eerstvolgende positioned 'parent' in dit geval de div header-top */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* alle elementen met class button */
+.button {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    /* heel lichtjes doorzichtig maken bij mouse over (hover) */
+    opacity: 0.8;
+}
+
+/* titel van content element (see what's next) */
+#header-content h1 {
+    /* 1rem is standaard 16px */
+    /* aan te passen via html of * 'element' font-size */
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* tekst binnen content (watch anywhere... */
+#header-content p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* button binnen content aanpassen */
+#header-content .button {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+}
+
+/* algemene css voor tabs */
+#tabs {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
