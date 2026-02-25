@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .card {
+            width: 150px;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        /* een specifieke element (alle elementen van dit type op de hele pagina) */
+        p {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        h1 {
+            /* display: inline-block; */
+            padding-top: 20px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 10px;
+        }
+
+        body {
+            margin-top: 10px;
+        }
+
+        /* alinea's met class intro */
+        .intro p {
+            display: inline;
+            margin-left: 100px;
+            font-style: italic;
+        }
+
+        /* > slaat enkel op 'direct' children */
+        nav > a {
+            color: green;
+        }
+
+        p, li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="intro">
+        <h1 id="title">CVO Creo</h1>
+        <p>Welkom bij onze school</p>
+        <p>Test</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Over</a> |
+        <a href="#">Contact</a>
+        <div id="navicons">
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <section>
+        <p>Hieronder vind je enkele van de opleidingen die we aanbieden:</p>
+        <ul>
+            <li>ICT Programmeren</li>
+            <li class="important">ICT-supportmedewerker</li>
+            <li>ICT en administratie</li>
+        </ul>
+        <div class="card">
+            <img src="img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <h5>Opleidingsverantwoordelijke</h5>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#">Klik hier voor meer informatie</a>
+    </footer>
+
+</body>
+
+</html>

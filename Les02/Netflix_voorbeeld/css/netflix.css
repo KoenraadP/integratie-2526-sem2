@@ -10,7 +10,7 @@ html {
 header {
     position: relative;
     background-image: url("../images/background.jpg");
-    /* vh --> viewheight, hoogte van het venster */
+    /* vh --> viewport height, hoogte van het venster */
     height: 80vh;
     width: 100%;
 }

@@ -1,0 +1,14 @@
+.container {
+    height: 400px;
+    background-color: yellow;
+}
+
+.container div {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 10px;
+    font-size: 3rem;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
