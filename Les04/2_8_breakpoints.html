@@ -9,17 +9,35 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Bootstrap Sandbox</title>
     <style>
-        /* Small devices (landscape phones) */
+        /* geen foto's printen */
+        @media print {
+            img {
+                display: none;
+            }
+        }
 
-        @media () {}
+        @media (max-width: 575px) {
+            body {
+                background-color: coral;
+            }
+            img {
+                display: none;
+            }
+        }
 
-        /* Medium devices (tablets) */
-
-        @media () {}
+        @media (min-width: 576px) {
+            body {
+                background-color: red;
+            }
+        }
 
         /* Large devices (desktops) */
 
-        @media () {}
+        @media (min-width: 768px) {
+            img {
+                float: right;
+            }
+        }
 
         /* Extra large devices (large desktops) */
 
@@ -113,6 +131,8 @@
     </header>
 
     <div class="container">
+
+        <img src="https://picsum.photos/200/300" alt="">
         <!--########################START HERE#########################-->
 
 
