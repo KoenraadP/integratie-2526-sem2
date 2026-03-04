@@ -9,15 +9,48 @@
 #grid1 {
     padding: 10px;
     background-color: cyan;
+    display: grid;
+    /* 3 kolommen van dezelfde breedte */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 2fr 1fr 1fr;
 }
 
 #grid2 {
     background-color: darkblue;
     padding: 10px;
+    display: grid;
+    /* 3 kolommen en 3 rijen */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* gap: ruimte tussen de grid elementen */
+    gap: 10px;
 }
 
 #grid2 div {
     background-color: lightblue;
     text-align: center;
     font-size: 3rem;
+}
+
+#item1 {
+    /* instellen vanaf  welke kolom LIJN er moet gestart en gestopt worden */
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#item2 {
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    /* grid-column: combinatie van column-start en column-end */
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+#item5 {
+    /* grid-column: 2 / 4; */
+    grid-column: 2 / span 2;
 }

@@ -1,6 +1,13 @@
 .container {
-    height: 400px;
+    height: 800px;
     background-color: yellow;
+    /* flex plaatst alle elementen BINNEN dit element gewoon naast elkaar */
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: bij standaard (row) van links naar rechts */
+    justify-content: space-between;
+    /* align-items: bij standaard (row) van boven naar onder */
+    align-items: center;
 }
 
 .container div {
@@ -11,4 +18,16 @@
     width: 100px;
     height: 50px;
     text-align: center;
+}
+
+#flex1 {
+    flex: 4;
+}
+
+#flex2 {
+    flex: 2;
+}
+
+#flex3 {
+    flex: 1;
 }
