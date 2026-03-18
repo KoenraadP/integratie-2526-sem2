@@ -90,67 +90,66 @@
     <form>
       <!-- TEXT FIELD GROUPS -->
       <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter name">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" type="text" id="name" placeholder="Enter name">
       </div>
       <div>
-        <label for="email">Email address</label>
-        <input type="email" id="email" placeholder="Enter email">
+        <label class="form-label" for="email">Email address</label>
+        <input class="form-control" type="email" id="email" placeholder="Enter email">
       </div>
       <div>
-        <label for="company">Company</label>
-        <input type="text" id="company" placeholder="Enter company name">
+        <label class="form-label" for="company">Company</label>
+        <input class="form-control" type="text" id="company" placeholder="Enter company name">
       </div>
-      <div>
-        <input type="password" id="password" placeholder="Password">
-        <label for="password">Password</label>
+      <div class="form-floating">
+        <input class="form-control" type="password" id="password" placeholder="Password">
+        <label class="form-label" for="password">Password</label>
       </div>
       <!-- SELECT -->
-      <div>
-        <label for="gender">Gender</label>
-        <select id="gender">
+      <div class="col-1">
+        <label class="form-label" for="gender">Gender</label>
+        <select class="form-select" id="gender">
           <option>Male</option>
           <option>Female</option>
         </select>
       </div>
       <!-- TEXTAREA -->
       <div>
-        <label for="message">Message</label>
-        <textarea id="message" rows="3"></textarea>
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
       </div>
       <!-- FILE INPUT -->
       <div>
-        <label for="file">File input</label>
-        <input type="file" id="file">
-        <small id="fileHelp">Max 3mb size</small>
+        <label class="form-label" for="file">File input</label>
+        <input class="form-control" type="file" id="file">
+        <small class="form-text" id="fileHelp">Max 3mb size</small>
       </div>
       <br>
       <br>
       <!-- RANGE -->
       <div>
-        <label for="membership">Membership Level</label>
-        <input type="range">
+        <label class="form-label" for="membership">Membership Level</label>
+        <input class="form-range" type="range">
       </div>
 
       <br>
 
-      <button type="submit">Submit</button>
+      <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 
     <br>
     <br>
 
     <!-- INLINE FORM -->
-    <form>
-      <input type="text" id="username" placeholder="Enter username">
-      <input type="text" id="password" placeholder="Password">
+    <form class="row row-cols-md-auto align-items-center g-2">
+      <div><input class="form-control" type="text" id="username" placeholder="Enter username"></div>
+      <div><input class="form-control" type="text" id="password" placeholder="Password"></div>
       <div>
         <label>
-          <input type="checkbox"> Remember me
+          <input class="form-check-input" type="checkbox"> Remember me
         </label>
       </div>
-
-      <button type="submit">Submit</button>
+      <div><button class="btn btn-primary" type="submit">Submit</button></div>
     </form>
 
     <br>
@@ -158,12 +157,12 @@
 
     <!-- FORM ROW -->
     <form>
-      <div>
-        <div>
-          <input type="text" placeholder="First name">
+      <div class="row g-2">
+        <div class="col-sm-6">
+          <input class="form-control" type="text" placeholder="First name">
         </div>
-        <div>
-          <input type="text" placeholder="Last name">
+        <div class="col-sm-6">
+          <input class="form-control" type="text" placeholder="Last name">
         </div>
       </div>
     </form>
@@ -172,17 +171,44 @@
     <br>
 
     <!-- VALIDATION -->
-    <form action="" id="loginForm">
+    <!-- novalidate om te zorgen dat de standaard browser boodschappen niet getoond worden -->
+    <form action="" id="login-form" novalidate>
       <div>
-        <label for="username">Username</label>
-        <input type="text" id="username">
+        
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" type="text" id="username" required>
+        <!-- feedback voor validatie -->
+        <div class="valid-feedback">Gebruikersnaam OK!</div>
+        <div class="invalid-feedback">Gebruikersnaam niet OK!</div>
       </div>
       <div>
-        <label for="email">Username</label>
-        <input type="email" id="email">
+        
+        <label class="form-label" for="email">E-mail</label>
+        <input class="form-control" type="email" id="email" required>
+        <!-- feedback voor validatie -->
+        <div class="valid-feedback">E-mail OK!</div>
+        <div class="invalid-feedback">E-mail niet OK!</div>
       </div>
-      <input type="submit" value="Log in">
+      <div class="d-grid">
+        <input class="btn btn-warning mt-3" type="submit" value="Log in">
+      </div>
     </form>
+
+    <!-- bootstrap validatie script -->
+    <script>
+      // form koppelen
+      let form = document.getElementById("login-form");
+      // code voor form doorsturen (submit)
+      form.addEventListener("submit", function (e) {
+        // als formulier niet valid is (als er ergens fouten in staan)
+        if (!form.checkValidity()) {
+          // form submit blokkeren
+          e.preventDefault();
+        }
+        // bootstrap validatie boodschappen tonen
+        form.classList.add("was-validated");
+      })
+    </script>
 
   </div>
   <!-- ./container -->
