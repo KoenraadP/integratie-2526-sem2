@@ -200,10 +200,20 @@
     </div>
     <br>
     <!-- MULTIPLE BARS -->
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="progress-stacked">
+
+      <div class="progress" style="width:15%">
+        <div class="progress-bar"></div>
+      </div>
+
+      <div class="progress" style="width:25%">
+        <div class="progress-bar bg-warning"></div>
+      </div>
+
+      <div class="progress" style="width:35%">
+        <div class="progress-bar bg-danger"></div>
+      </div>
+
     </div>
     <br>
     <!-- EX WITH SCRIPT -->
@@ -212,6 +222,42 @@
     </div>
     <input type="button" value="go" id="progressButton">
 
+    <script>
+      const progressBar = document.getElementById("progressBar");
+      const progressButton = document.getElementById("progressButton");
+
+      progressButton.addEventListener("click", UpdateProgress);
+
+      function UpdateProgress() {
+        let width = 0;
+        //als de bar al op 100% staat, eerst weer op nul plaatsen en dan opnieuw opvullen
+        if (progressBar.style.width == "100%") {
+          progressBar.style.width = "0%";
+          //met setTimeout laat je een function pas na x milliseconden starten
+          setTimeout(Interval, 1000);
+        } else {
+          //interval function laten lopen als de bar nog niet gevuld is
+          Interval();
+        }
+
+        function Interval() {
+          //met setInterval laat je een function lopen iedere x milliseconden
+          //gekoppeld aan een variabele hier zodat deze ook weer kan gestopt worden (in function UpdateBar)
+          let updateProgress = setInterval(UpdateBar, 100);
+        }
+
+        function UpdateBar() {
+          if (width >= 100) {
+            clearInterval(updateProgress);
+          } else {
+            //breedte van progressbar vergroten en ook cijfer dat getoond wordt mee vergroten
+            width++;
+            progressBar.style.width = width + "%";
+            progressBar.textContent = width + "%";
+          }
+        }
+      }
+    </script>
 
 
     <!-- EX2 https://jsfiddle.net/f6hLt9ak/2/ -->
