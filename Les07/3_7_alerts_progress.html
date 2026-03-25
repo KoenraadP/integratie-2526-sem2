@@ -92,43 +92,43 @@
     <!--####################START HERE######################-->
 
     <!-- ALERTS -->
-    <div>
+    <div class="alert alert-primary">
       <strong>Primary</strong> Blog post added
     </div>
 
-    <div>
+    <div class="alert alert-secondary">
       <strong>Secondary</strong> Blog post added
     </div>
 
-    <div>
+    <div class="alert alert-success">
       <strong>Success</strong> Blog post added
     </div>
 
-    <div>
+    <div class="alert alert-danger">
       <strong>Danger</strong> Please check the log files
     </div>
 
-    <div>
+    <div class="alert alert-info">
       <strong>Info</strong> You have a new message
     </div>
 
-    <div>
+    <div class="alert alert-warning">
       <strong>Warning</strong> Please check the log files
     </div>
 
-    <div>
+    <div class="alert alert-light">
       <strong>Light</strong> Please check the log files
     </div>
 
-    <div>
+    <div class="alert alert-dark">
       <strong>Dark</strong> Please check the log files
     </div>
 
     <br><br>
 
     <!-- DISMISSABLE ALERT -->
-    <div>
-      <button type="button"></button>
+    <div class="alert alert-success alert-dismissible fade show">
+      <button class="btn-close" data-bs-dismiss="alert" type="button"></button>
       <strong>Dismissable</strong> Blog post added
     </div>
 
@@ -136,36 +136,67 @@
     <br>
 
     <!-- SHOW AND DISMISS -->
-    <div id="alert"></div>
-    <button class="btn btn-primary" id="alertButton">Show alert</button>
-    
-    
+    <div id="alert">
+
+    </div>
+    <button class="btn btn-primary" id="alert-button">Show alert</button>
+
+    <!-- script om alert te genereren -->
+    <script>
+      // koppelen button en div
+      let alertDiv = document.getElementById("alert");
+      let alertBtn = document.getElementById("alert-button");
+      alertBtn.addEventListener("click", function () {
+
+        // eerst alert div leegmaken
+        alertDiv.innerText = "";
+
+        // alert div aanmaken
+        let alert = document.createElement("div"); // <div></div>
+        alert.className = "alert alert-success alert-dismissible fade show";
+
+        // button maken (voor close)
+        let closeBtn = document.createElement("button"); // <button></button>
+        closeBtn.className = "btn-close";
+        closeBtn.setAttribute("data-bs-dismiss", "alert") // data-bs-dismiss="alert"
+
+        // tekst toevoegen aan alert
+        alert.textContent = "Succesvol toegevoegd!";
+
+        // button toevoegen aan alert
+        alert.append(closeBtn);
+
+        // alert div toevoegen aan HTML element alertDiv
+        alertDiv.append(alert);
+      })
+    </script>
+
 
     <br><br>
 
     <!-- PROGRESS BARS -->
-    <div>
-      <div></div>
+    <div class="progress">
+      <div class="progress-bar" style="width:25%">25%</div>
     </div>
     <br>
     <!-- COLOR -->
-    <div>
-      <div></div>
+    <div class="progress">
+      <div class="progress-bar bg-danger" style="width:50%"></div>
     </div>
     <br>
     <!-- HEIGHT -->
-    <div>
-      <div></div>
+    <div class="progress" style="height: 25px">
+      <div class="progress-bar bg-warning" style="width:75%"></div>
     </div>
     <br>
     <!-- STRIPED -->
-    <div>
-      <div></div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" style="width:33%"></div>
     </div>
     <br>
     <!-- ANIMATED -->
-    <div>
-      <div></div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:66%"></div>
     </div>
     <br>
     <!-- MULTIPLE BARS -->
@@ -181,7 +212,7 @@
     </div>
     <input type="button" value="go" id="progressButton">
 
-    
+
 
     <!-- EX2 https://jsfiddle.net/f6hLt9ak/2/ -->
     <!-- AUTOMATIC PAGE LOADER https://codebyzach.github.io/pace/ -->
