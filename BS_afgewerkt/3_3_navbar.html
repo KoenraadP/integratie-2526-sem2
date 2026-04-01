@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Bootstrap Sandbox</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="display-3 text-center my-4">Basic Typography</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              2: Utilities
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
+              <a class="dropdown-item" href="2_3_text_alignment_display.html">2.3 Text Alignment & Display</a>
+              <a class="dropdown-item" href="2_4_floats_position.html">2.4 Floats & Position</a>
+              <a class="dropdown-item" href="2_5_colors_background.html">2.5: Colors & Background</a>
+              <a class="dropdown-item" href="2_6_spacing.html">2.6 Spacing</a>
+              <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
+              <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              3: CSS Components
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="3_2_buttons.html">3.2 Buttons</a>
+              <a class="dropdown-item" href="3_3_navbar.html">3.3 Navbar</a>
+              <a class="dropdown-item" href="3_4_list_groups_badges.html">3.4 List Groups & Badges</a>
+              <a class="dropdown-item" href="3_5_forms.html">3.5 Forms</a>
+              <a class="dropdown-item" href="3_6_input_groups.html">3.6 Input Groups</a>
+              <a class="dropdown-item" href="3_7_alerts_progress.html">3.7 Alerts & Progress</a>
+              <a class="dropdown-item" href="3_8_tables_pagination.html">3.8 Tables & Pagination</a>
+              <a class="dropdown-item" href="3_9_cards.html">3.9 Cards</a>
+              <a class="dropdown-item" href="3_10_media_object.html">3.10 Media Objects</a>
+              <a class="dropdown-item" href="3_11_jumbotron.html">3.11 Jumbotron</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              4: Grid & Flexbox
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="4_2_grid_system.html">4.2 Grid System</a>
+              <a class="dropdown-item" href="4_3_grid_alignment.html">4.3 Grid Alignment</a>
+              <a class="dropdown-item" href="4_4_flexbox.html">4.4 Flexbox</a>
+              <a class="dropdown-item" href="4_5_auto_margins_wrapping_order.html">4.5 Auto Margins & Wrap</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              5: JavaScript Widgets
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="5_2_carousel.html">5.2 Carousel</a>
+              <a class="dropdown-item" href="5_3_collapse.html">5.3 Collapse</a>
+              <a class="dropdown-item" href="5_4_tooltips.html">5.4 Tooltips</a>
+              <a class="dropdown-item" href="5_5_popovers.html">5.5 Popovers</a>
+              <a class="dropdown-item" href="5_6_modals.html">5.6 Modals</a>
+              <a class="dropdown-item" href="5_7_scrollspy.html">5.7 ScrollSpy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </header>
+
+  <!--##################START HERE###################-->
+
+  <!-- SIMPLE NAVBAR WITHOUT TOGGLER -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- NAVBAR WITH RESPONSIVE TOGGLE -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container-fluid justify-content-start">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav-content" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NAVBAR WITH FORM -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <search>
+        <form action="" class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Search">
+          <button class="btn btn-info">Search</button>
+        </form>
+      </search>
+    </div>
+  </nav>
+
+  <!-- NAVBAR WITH DROPDOWN -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="" class="dropdown-item">Link 1</a></li>
+            <li><a href="" class="dropdown-item">Link 2</a></li>
+            <li><a href="" class="dropdown-item">Link 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  <!-- FIXED TOP -->
+  <nav class="navbar navbar-expand-md fixed-top border-bottom border-dark border-5 bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- FIXED BOTTOM -->
+  <nav class="navbar navbar-expand-md fixed-bottom border-top border-dark border-5 bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  <div class="container">
+
+    <!-- NAVS -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 4</a>
+      </li>
+    </ul>
+
+
+    <!-- HORIZONTAL CENTER ALIGN -->
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 4</a>
+      </li>
+    </ul>
+
+    <!-- RIGHT ALIGN -->
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 4</a>
+      </li>
+    </ul>
+
+    <br>
+    <br>
+
+    <!-- VERTICAL -->
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 4</a>
+      </li>
+    </ul>
+
+    <br>
+    <br>
+
+    <!-- FILL -->
+    <ul class="nav nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 4</a>
+      </li>
+    </ul>
+
+    <!-- DYNAMIC TABS -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#link-1-content">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#link-2-content">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#link-3-content">Link 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#link-4-content">Link 4</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade active show" id="link-1-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi, dicta laudantium, asperiores excepturi
+        distinctio fugit id laboriosam ex quia magnam. Unde, consequuntur magni! Animi iste dolor temporibus impedit
+        voluptatibus quisquam deleniti assumenda esse vitae quibusdam quod nihil porro mollitia perferendis sint
+        possimus, reprehenderit cumque tenetur, culpa ea enim eaque?
+      </div>
+      <div class="tab-pane fade" id="link-2-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+        accusamus odit odio sit velit, reiciendis atque quo dolor non! Recusandae consequatur iure alias ipsum
+        reiciendis, eaque quidem dolores cupiditate quis officiis ea incidunt libero magni dignissimos eius iste porro
+        amet eveniet veniam. Perspiciatis perferendis sequi iure facilis quo modi voluptatibus.</div>
+      <div class="tab-pane fade" id="link-3-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+        nobis voluptatem pariatur officia, ducimus expedita iure placeat sequi exercitationem officiis adipisci nesciunt
+        earum nam magni sed iste illo ullam eveniet. Iure sed dicta est quidem soluta totam ducimus, adipisci expedita
+        veritatis, similique repellendus, cupiditate eligendi aliquam incidunt iste quae? Eaque.</div>
+      <div class="tab-pane fade" id="link-4-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam in
+        eveniet porro delectus assumenda, animi vero odit soluta, sint iste accusamus veritatis est perferendis aliquid
+        cumque, ullam reprehenderit tempora tenetur deserunt! Libero velit eius unde, soluta facilis at, explicabo eum
+        nihil omnis eos ab dicta non reprehenderit exercitationem deleniti voluptatibus?</div>
+    </div>
+
+    <br>
+    <br>
+
+
+  </div>
+  <!-- ./container -->
+  <div style="margin-top:500px;"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
