@@ -64,6 +64,8 @@ console.log(library.books.filter(x => x.year < 1950));
 // oefening deel 2
 // -----------------------------------------------------------------------------------
 
+localStorage.setItem("libraryObj",library);
+
 // library object omzetten naar string formaat en opslaan in nieuwe variabele
 let libraryString = JSON.stringify(library);
 
